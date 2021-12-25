@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from dummy import Dummy
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 @app.route('/data/list', methods=['GET'])
 def getData():
