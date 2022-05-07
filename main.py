@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/data/list', methods=['GET'])
 def getData():
-    dataList = Dummy().dummyList()
+    dataList: List[ObjectModel] = Dummy().dummyList()
     dataList_json = []
     for row in dataList:
         dataList_json.append(row.__dict__)
